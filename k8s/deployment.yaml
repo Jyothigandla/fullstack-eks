@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fullstack-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fullstack-app
+  template:
+    metadata:
+      labels:
+        app: fullstack-app
+    spec:
+      containers:
+      - name: fullstack-app
+        image: 568164522768.dkr.ecr.us-east-1.amazonaws.com/fullstack-app:latest
+        ports:
+        - containerPort: 3000
