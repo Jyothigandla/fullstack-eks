@@ -9,7 +9,8 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/jyothigandla/fullstack-eks.git'
+               git branch: 'main',
+               url: 'https://github.com/jyothigandla/fullstack-eks.git'
             }
         }
 
